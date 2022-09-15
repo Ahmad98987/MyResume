@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none !important;
+}
+
+:root {
+    --primary: #D980FA;
+    --light-primary: #eac3fa5e;
+    --secondary: #2d3436;
+    --light-secondary: #b2bec3;
+    --third: #273c75;
+    --light-third: #344675;
+    --white: #ffffff;
+    --light-white: #f3f3f3;
+}
+
+.dark-theme {
+    --light-white: #57606f;
+    --secondary: #f1f2f6;
+    --white: #2f3542;
+}
+
+body {
+    background: var(--third);
+    padding: 8% 10%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(179, 178, 178);
+}
+
+/* Container */
+#container {
+    background: var(--white);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+#container::after {content: ''; display: block; clear: both;}
+
+/* Tabs */
+.tab {
+    float: left;
+    /* border: 1px solid #ccc; */
+    width: 20%;
+    height: 650px;
+}
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: var(--secondary);
+    padding: 16px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 1px solid var(--light-white);
+    border-right: 3px solid transparent;
+    transition: 0.3s;
+}
+.tab button:hover {
+    background-color: var(--light-primary);
+    border-right: 3px solid var(--primary);
+}
+.tab button.active {
+    background-color: var(--light-primary);
+    border-right: 3px solid var(--primary);
+}
+
+.tab button:last-child {border-bottom: none;}
+
+/* Tabs Content */
+.tabcontent {
+    /* background-color: tomato; */
+    float: left;
+    padding: 16px 12px;
+    /* border: 1px solid #ccc; */
+    width: 80%;
+    border-left: none;
+    height: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tabcontent h3 { color: var(--secondary); }
+
+/* Profile Content */
+.img_wrapper {
+    /* background-color: tomato; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3%;
+    color: var(--secondary);
+}
+.img_wrap {
+    background-color: var(--light-white);
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+.img_wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sentMsg_btn {
+    padding: 5px 25px;
+    background-color: var(--primary);
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 50px;
+    outline: 2px solid var(--primary);
+    cursor: pointer;
+    margin-top: 1%;
+    transition: all 0.5s;
+}
+.sentMsg_btn:hover {border: 2px solid var(--primary);}
+
+.text-wrapper {margin-top: 3%;}
+.text-wrapper p {
+    font-size: 13.5px;
+    color: var(--secondary);
+}
+.text-wrapper h4 { color: var(--secondary); }
+.text-wrapper ul {
+    padding: 10px 0px;
+}
+.text-wrapper ul li {
+    list-style-type: none;
+    font-size: 13px;
+    color: var(--secondary);
+}
+.text-wrapper ul li::before {
+    content: ">";
+    color: var(--primary);
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+/* Social icons */
+.social_icons {
+    /* background-color: tomato; */
+    width: 13%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social_icons a {
+    color: var(--light-secondary);
+    transition: ease-in-out 0.3s;
+}
+.social_icons a:hover {color: var(--primary);}
+
+/* Intersets Content */
+#interset h3, #hobbies h3, #follow h3 {
+    margin-bottom: 5%;
+}
+.interset_box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(146, 146, 146, 0.2);
+    border-radius: 3px;
+    padding: 1em;
+    position: relative;
+    margin-top: 0.50em;
+    margin-bottom: 2.5em;
+    margin-left: 0.30em;
+    text-decoration: none;
+    transition: all 0.5s;
+    padding-top: 2.5rem;
+    color: var(--light-secondary);
+}
+.interset_box p {
+    text-align: center;
+    color: var(--secondary) !important;
+}
+.interset_box:hover, .IB_icon  {
+    box-shadow: 2px 2px 5px rgba(146, 146, 146, 0.2);
+    color: var(--secondary);
+}
+.IB_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15%;
+    left: 33%;
+    color: var(--white);
+    font-size: 19px;
+}
+
+/* Project's */
+.project_box {
+    width: 30%;
+    height: auto;
+    margin: 2% 0% 0% 2%;
+    background: var(--white);
+    box-shadow: 1px 1px 5px rgba(187, 186, 186, 0.2);
+    color: var(--light-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+    float: left;
+    transition: ease-in-out 0.3s;
+}
+.project_box:hover {color: var(--primary);}
+.project_box span {font-size: 4rem;}
+.project_box small { text-align: center; }
+
+
+/* Toggle btn */
+.mode_wrap {
+    /* background-color: tomato; */
+    width: 40%;
+    margin: 30% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mode_btn input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    outline: none;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+    cursor: pointer;
+}
+.mode_btn input:checked[type="checkbox"]
+{
+    background-color: var(--primary);
+}
+.mode_btn input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+}
+.mode_btn input:checked[type="checkbox"]::before {
+    left: 25px;
+}
+
+.mode_wrap small {
+    color: var(--secondary);
+}
+
+/* Mobile View */
+@media only screen and (max-width: 500px) 
+{
+    body { padding: 0% 0%; }
+    #container { width: 100%; height: 100vh; }
+    .tab {
+        width: 100%;
+        height: auto;
+    }
+
+    .tab button {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .mob_view {
+        display: none;
+    }
+
+    .tabcontent {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .social_icons { width: 30%; }
+
+    .interset_box { width: 100%; }
+    .IB_icon { left: 44%; }
+    .project_box { width: 100%; }
+    .mode_wrap { width: 55%; }
+}
