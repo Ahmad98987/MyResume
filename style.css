@@ -127,6 +127,7 @@ body {
     height: 150px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 2%;
 }
 .img_wrap img {
     position: absolute;
@@ -144,7 +145,7 @@ body {
     border-radius: 50px;
     outline: 2px solid var(--primary);
     cursor: pointer;
-    margin-top: 1%;
+    margin-top: 3%;
     transition: all 0.5s;
 }
 .sentMsg_btn:hover {border: 2px solid var(--primary);}
